@@ -5,22 +5,25 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(16.h),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 294.h,
-                child: Row(
-                  children: const [
-                    Icon(Icons.settings),
-                  ],
-                ),
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(16.h),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 294.h,
+              child: Row(
+                children: [
+                  Text('Recently played'),
+                  ClickableIcon(icon: Icons.notifications_none, onTap: () {}),
+                  ClickableIcon(
+                    icon: Icons.settings,
+                    onTap: (() {}),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
