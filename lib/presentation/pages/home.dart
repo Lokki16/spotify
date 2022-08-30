@@ -15,10 +15,17 @@ class Home extends StatelessWidget {
               child: Row(
                 children: [
                   Text('Recently played'),
-                  ClickableIcon(icon: Icons.notifications_none, onTap: () {}),
                   ClickableIcon(
-                    icon: Icons.settings,
-                    onTap: (() {}),
+                    icon: SpotifyIcons.notifications,
+                    onTap: () {},
+                  ),
+                  ClickableIcon(
+                    icon: SpotifyIcons.history,
+                    onTap: () {},
+                  ),
+                  ClickableIcon(
+                    icon: SpotifyIcons.settings,
+                    onTap: () {},
                   ),
                 ],
               ),

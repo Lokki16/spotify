@@ -1,7 +1,7 @@
 import 'package:spotify/presentation/template/base/template.dart';
 
 class ClickableIcon extends StatelessWidget {
-  final IconData icon;
+  final String icon;
   final VoidCallback onTap;
 
   const ClickableIcon({
@@ -14,7 +14,12 @@ class ClickableIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Icon(icon, size: 24.h),
+      child: SvgPicture.asset(
+        icon,
+        color: ThemeColors.white,
+        width: 24.w,
+        height: 24.h,
+      ),
     );
   }
 }
