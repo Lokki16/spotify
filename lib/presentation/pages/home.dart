@@ -7,28 +7,33 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(16.h),
+        padding:
+            EdgeInsets.only(top: 56.h, bottom: 16.h, left: 16.w, right: 16.w),
         child: Column(
           children: [
-            SizedBox(
-              height: 294.h,
-              child: Row(
-                children: [
-                  Text('Recently played'),
-                  ClickableIcon(
-                    icon: SpotifyIcons.notifications,
-                    onTap: () {},
-                  ),
-                  ClickableIcon(
-                    icon: SpotifyIcons.history,
-                    onTap: () {},
-                  ),
-                  ClickableIcon(
-                    icon: SpotifyIcons.settings,
-                    onTap: () {},
-                  ),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text('Recently played'),
+                Row(
+                  children: [
+                    ClickableIcon(
+                      icon: SpotifyIcons.notifications,
+                      onTap: () {},
+                    ),
+                    SizedBox(width: 20.w),
+                    ClickableIcon(
+                      icon: SpotifyIcons.history,
+                      onTap: () {},
+                    ),
+                    SizedBox(width: 20.w),
+                    ClickableIcon(
+                      icon: SpotifyIcons.settings,
+                      onTap: () {},
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
