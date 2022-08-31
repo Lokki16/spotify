@@ -14,7 +14,10 @@ class Home extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Recently played'),
+                const Text(
+                  'Recently played',
+                  style: ThemeTextGraphik.graphik20,
+                ),
                 Row(
                   children: [
                     ClickableIcon(

@@ -28,3 +28,76 @@ flutter:
     - assets/icons/history.svg
     - assets/icons/notifications.svg
     - assets/icons/settings.svg
+
+  fonts:
+    - family: GraphikBlack
+      fonts:
+        - asset: assets/fonts/GraphikBlack.otf
+
+    - family: GraphikBlackItalic
+      fonts:
+        - asset: assets/fonts/GraphikBlackItalic.otf
+
+    - family: GraphikBold
+      fonts:
+        - asset: assets/fonts/GraphikBold.otf
+
+    - family: GraphikBoldItalic
+      fonts:
+        - asset: assets/fonts/GraphikBoldItalic.otf
+
+    - family: GraphikExtralight
+      fonts:
+        - asset: assets/fonts/GraphikExtralight.otf
+
+    - family: GraphikExtralightItalic
+      fonts:
+        - asset: assets/fonts/GraphikExtralightItalic.otf
+
+    - family: GraphikLight
+      fonts:
+        - asset: assets/fonts/GraphikLight.otf
+
+    - family: GraphikLightItalic
+      fonts:
+        - asset: assets/fonts/GraphikLightItalic.otf
+
+    - family: GraphikMedium
+      fonts:
+        - asset: assets/fonts/GraphikMedium.otf
+
+    - family: GraphikMediumItalic
+      fonts:
+        - asset: assets/fonts/GraphikMediumItalic.otf
+
+    - family: GraphikRegular
+      fonts:
+        - asset: assets/fonts/GraphikRegular.otf
+
+    - family: GraphikRegularItalic
+      fonts:
+        - asset: assets/fonts/GraphikRegularItalic.otf
+
+    - family: GraphikSemibold
+      fonts:
+        - asset: assets/fonts/GraphikSemibold.otf
+
+    - family: GraphikSemiboldItalic
+      fonts:
+        - asset: assets/fonts/GraphikSemiboldItalic.otf
+
+    - family: GraphikSuper
+      fonts:
+        - asset: assets/fonts/GraphikSuper.otf
+
+    - family: GraphikSuperItalic
+      fonts:
+        - asset: assets/fonts/GraphikSuperItalic.otf
+
+    - family: GraphikThin
+      fonts:
+        - asset: assets/fonts/GraphikThin.otf
+
+    - family: GraphikThinItalic
+      fonts:
+        - asset: assets/fonts/GraphikThinItalic.otf
