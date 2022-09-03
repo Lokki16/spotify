@@ -5,35 +5,44 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var listOfArtistsAndAlbums = List<Map<String, dynamic>>.filled(10, {
+      'name': 'Dance Gavin Dance',
+      'image': 'assets/img/artist.png',
+      'onTap': () {},
+    });
+
     return Scaffold(
-      body: Padding(
-        padding:
-            EdgeInsets.only(top: 56.h, bottom: 16.h, left: 16.w, right: 16.w),
-        child: SpacedColumn(
-          space: 24,
-          children: [
-            Greetings(
-              greetings: 'Good evening',
-              icons: [
-                {
-                  'icon': SpotifyIcons.notifications,
-                  'onTap': () {},
-                },
-                {
-                  'icon': SpotifyIcons.history,
-                  'onTap': () {},
-                },
-                {
-                  'icon': SpotifyIcons.settings,
-                  'onTap': () {},
-                },
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(16.h),
+            child: SpacedColumn(
+              space: 24,
+              children: [
+                Greetings(
+                  greetings: 'Good evening',
+                  icons: [
+                    {
+                      'icon': SpotifyIcons.notifications,
+                      'onTap': () {},
+                    },
+                    {
+                      'icon': SpotifyIcons.history,
+                      'onTap': () {},
+                    },
+                    {
+                      'icon': SpotifyIcons.settings,
+                      'onTap': () {},
+                    },
+                  ],
+                ),
+                ListOfArtistsAndAlbums(
+                  title: 'Recently played',
+                  artistsAndAlbums: listOfArtistsAndAlbums,
+                )
               ],
             ),
-            const ListOfActorsAndPlaylists(
-              name: 'Recently played',
-              actorsAndPlaylists: [],
-            )
-          ],
+          ),
         ),
       ),
     );
@@ -57,7 +66,7 @@ class Greetings extends StatelessWidget {
       children: [
         Text(
           greetings,
-          style: ThemeTextGraphik.graphik20,
+          style: ThemeTextSemibold.graphik20,
         ),
         SpacedRow(
           space: 20,
@@ -74,14 +83,14 @@ class Greetings extends StatelessWidget {
   }
 }
 
-class ListOfActorsAndPlaylists extends StatelessWidget {
-  final String name;
-  final List<Widget> actorsAndPlaylists;
+class ListOfArtistsAndAlbums extends StatelessWidget {
+  final String title;
+  final List<Map<String, dynamic>> artistsAndAlbums;
 
-  const ListOfActorsAndPlaylists({
+  const ListOfArtistsAndAlbums({
     Key? key,
-    required this.name,
-    required this.actorsAndPlaylists,
+    required this.title,
+    required this.artistsAndAlbums,
   }) : super(key: key);
 
   @override
@@ -90,8 +99,22 @@ class ListOfActorsAndPlaylists extends StatelessWidget {
       space: 16,
       children: [
         Text(
-          name,
-          style: ThemeTextGraphik.graphik20,
+          title,
+          style: ThemeTextSemibold.graphik20,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: SpacedRow(
+            space: 16,
+            children: [
+              for (var image in artistsAndAlbums)
+                ButtonWithIcon(
+                  name: image['name'],
+                  image: image['image'],
+                  onTap: image['onTap'],
+                ),
+            ],
+          ),
         ),
       ],
     );

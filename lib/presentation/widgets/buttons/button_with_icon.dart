@@ -2,13 +2,13 @@ import 'package:spotify/presentation/template/base/template.dart';
 
 class ButtonWithIcon extends StatelessWidget {
   final String name;
-  final String icon;
+  final String image;
   final VoidCallback onTap;
 
   const ButtonWithIcon({
     Key? key,
     required this.name,
-    required this.icon,
+    required this.image,
     required this.onTap,
   }) : super(key: key);
 
@@ -20,17 +20,22 @@ class ButtonWithIcon extends StatelessWidget {
           onTap: onTap,
           child: Container(
             width: 100.w,
-            height: 89.h,
+            height: 100.h,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(6.r),
+              shape: BoxShape.circle,
               image: DecorationImage(
-                image: NetworkImage(icon),
+                image: AssetImage(image),
                 fit: BoxFit.cover,
               ),
             ),
           ),
         ),
-        SizedBox(height: 5.h),
+        SizedBox(height: 8.h),
+        Text(
+          name,
+          style: ThemeTextSemibold.graphik12,
+          overflow: TextOverflow.ellipsis,
+        ),
       ],
     );
   }

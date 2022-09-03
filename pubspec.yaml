@@ -1,7 +1,7 @@
 name: spotify
 description: Spotify analog project.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -25,6 +25,8 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/img/artist.png
+
     - assets/icons/history.svg
     - assets/icons/notifications.svg
     - assets/icons/settings.svg
