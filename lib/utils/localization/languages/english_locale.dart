@@ -1,6 +1,8 @@
+import 'package:spotify/presentation/template/template.dart';
+
 class EnglishLocale {
   static const en = {
-    'good_evening': 'Good evening',
-    'recently_played': 'Recently played',
+    ConstantText.goodEvening: 'Good evening',
+    ConstantText.recentlyPlayed: 'Recently played',
   };
 }

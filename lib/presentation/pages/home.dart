@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
               space: 24,
               children: [
                 _Greetings(
-                  text: 'good_evening',
+                  text: ConstantText.goodEvening,
                   icons: [
                     {
                       'icon': ThemeIcons.notifications,
@@ -37,7 +37,7 @@ class Home extends StatelessWidget {
                   ],
                 ),
                 _ListOfArtistsAndAlbums(
-                  text: 'recently_played',
+                  text: ConstantText.recentlyPlayed,
                   artistsAndAlbums: listOfArtistsAndAlbums,
                 )
               ],
