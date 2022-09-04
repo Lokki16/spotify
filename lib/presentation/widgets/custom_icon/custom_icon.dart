@@ -1,12 +1,14 @@
 import 'package:spotify/presentation/template/template.dart';
 
-class ClickableIcon extends StatelessWidget {
+class CustomIcon extends StatelessWidget {
   final String icon;
+  final double height;
   final VoidCallback onTap;
 
-  const ClickableIcon({
+  const CustomIcon({
     Key? key,
     required this.icon,
+    this.height = 24,
     required this.onTap,
   }) : super(key: key);
 
@@ -17,8 +19,7 @@ class ClickableIcon extends StatelessWidget {
       child: SvgPicture.asset(
         icon,
         color: ThemeColors.white,
-        width: 24.w,
-        height: 24.h,
+        height: height.h,
       ),
     );
   }
