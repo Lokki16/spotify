@@ -72,10 +72,7 @@ class _Greetings extends StatelessWidget {
           space: 20,
           children: [
             for (var icon in icons)
-              CustomIcon(
-                icon: icon['icon'],
-                onTap: icon['onTap'],
-              ),
+              ClickableIcon(icon: icon['icon'], onTap: icon['onTap']),
           ],
         ),
       ],

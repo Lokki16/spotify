@@ -23,6 +23,7 @@ export '../../utils/localization/languages/english_locale.dart';
 export '../../utils/localization/languages/russian_locale.dart';
 
 // Widgets packages
+export '../widgets/buttons/clickable_icon.dart';
 export '../widgets/buttons/button_with_icon.dart';
 export '../widgets/custom_icon/custom_icon.dart';
 export '../widgets/custom_text/custom_text.dart';
