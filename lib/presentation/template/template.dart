@@ -7,7 +7,6 @@ export 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Theme packages
 export 'theme/theme_data.dart';
-export 'theme/theme_icons.dart';
 export 'theme/theme_color.dart';
 export 'theme/theme_text_style.dart';
 
@@ -16,6 +15,7 @@ export '../../utils/common/constants.dart';
 export '../../utils/common/constant_text.dart';
 export '../../utils/common/log_tester.dart';
 export '../../utils/common/validators.dart';
+export '../../utils/common/spotify_icons.dart';
 
 // Localization packages
 export '../../utils/localization/get_localization.dart';

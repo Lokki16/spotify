@@ -23,15 +23,15 @@ class Home extends StatelessWidget {
                   text: ConstantText.goodEvening,
                   icons: [
                     {
-                      'icon': ThemeIcons.notifications,
+                      'icon': SpotifyIcons.notifications,
                       'onTap': () {},
                     },
                     {
-                      'icon': ThemeIcons.history,
+                      'icon': SpotifyIcons.history,
                       'onTap': () {},
                     },
                     {
-                      'icon': ThemeIcons.settings,
+                      'icon': SpotifyIcons.settings,
                       'onTap': () {},
                     },
                   ],
