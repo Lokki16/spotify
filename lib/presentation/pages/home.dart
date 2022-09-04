@@ -38,7 +38,7 @@ class Home extends StatelessWidget {
                 ),
                 _ListOfArtistsAndAlbums(
                   text: ConstantText.recentlyPlayed,
-                  artistsAndAlbums: listOfArtistsAndAlbums,
+                  image: listOfArtistsAndAlbums,
                 )
               ],
             ),
@@ -85,12 +85,12 @@ class _Greetings extends StatelessWidget {
 
 class _ListOfArtistsAndAlbums extends StatelessWidget {
   final String text;
-  final List<Map<String, dynamic>> artistsAndAlbums;
+  final List<Map<String, dynamic>> image;
 
   const _ListOfArtistsAndAlbums({
     Key? key,
     required this.text,
-    required this.artistsAndAlbums,
+    required this.image,
   }) : super(key: key);
 
   @override
@@ -107,7 +107,7 @@ class _ListOfArtistsAndAlbums extends StatelessWidget {
           child: SpacedRow(
             space: 16,
             children: [
-              for (var image in artistsAndAlbums)
+              for (var image in image)
                 ButtonWithIcon(
                   text: image['name'],
                   image: image['image'],
