@@ -1,4 +1,4 @@
-import 'package:spotify/presentation/template/base/template.dart';
+import 'package:spotify/presentation/template/template.dart';
 
 class ClickableIcon extends StatelessWidget {
   final String icon;

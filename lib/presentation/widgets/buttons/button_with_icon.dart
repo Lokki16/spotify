@@ -1,13 +1,13 @@
-import 'package:spotify/presentation/template/base/template.dart';
+import 'package:spotify/presentation/template/template.dart';
 
 class ButtonWithIcon extends StatelessWidget {
-  final String name;
+  final String text;
   final String image;
   final VoidCallback onTap;
 
   const ButtonWithIcon({
     Key? key,
-    required this.name,
+    required this.text,
     required this.image,
     required this.onTap,
   }) : super(key: key);
@@ -31,8 +31,8 @@ class ButtonWithIcon extends StatelessWidget {
           ),
         ),
         SizedBox(height: 8.h),
-        Text(
-          name,
+        CustomText(
+          text: text,
           style: ThemeTextSemibold.graphik12,
           overflow: TextOverflow.ellipsis,
         ),

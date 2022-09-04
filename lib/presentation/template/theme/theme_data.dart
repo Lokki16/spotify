@@ -1,4 +1,4 @@
-import 'package:spotify/presentation/template/base/template.dart';
+import 'package:spotify/presentation/template/template.dart';
 
 class SpotifyTheme {
   static ThemeData get darkAndroidSpotifyTheme => ThemeData(

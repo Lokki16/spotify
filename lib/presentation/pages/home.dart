@@ -1,4 +1,4 @@
-import 'package:spotify/presentation/template/base/template.dart';
+import 'package:spotify/presentation/template/template.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -19,25 +19,25 @@ class Home extends StatelessWidget {
             child: SpacedColumn(
               space: 24,
               children: [
-                Greetings(
-                  greetings: 'Good evening',
+                _Greetings(
+                  text: 'good_evening',
                   icons: [
                     {
-                      'icon': SpotifyIcons.notifications,
+                      'icon': ThemeIcons.notifications,
                       'onTap': () {},
                     },
                     {
-                      'icon': SpotifyIcons.history,
+                      'icon': ThemeIcons.history,
                       'onTap': () {},
                     },
                     {
-                      'icon': SpotifyIcons.settings,
+                      'icon': ThemeIcons.settings,
                       'onTap': () {},
                     },
                   ],
                 ),
-                ListOfArtistsAndAlbums(
-                  title: 'Recently played',
+                _ListOfArtistsAndAlbums(
+                  text: 'recently_played',
                   artistsAndAlbums: listOfArtistsAndAlbums,
                 )
               ],
@@ -49,13 +49,13 @@ class Home extends StatelessWidget {
   }
 }
 
-class Greetings extends StatelessWidget {
-  final String greetings;
+class _Greetings extends StatelessWidget {
+  final String text;
   final List<Map<String, dynamic>> icons;
 
-  const Greetings({
+  const _Greetings({
     Key? key,
-    required this.greetings,
+    required this.text,
     required this.icons,
   }) : super(key: key);
 
@@ -64,8 +64,8 @@ class Greetings extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          greetings,
+        CustomText(
+          text: text,
           style: ThemeTextSemibold.graphik20,
         ),
         SpacedRow(
@@ -83,13 +83,13 @@ class Greetings extends StatelessWidget {
   }
 }
 
-class ListOfArtistsAndAlbums extends StatelessWidget {
-  final String title;
+class _ListOfArtistsAndAlbums extends StatelessWidget {
+  final String text;
   final List<Map<String, dynamic>> artistsAndAlbums;
 
-  const ListOfArtistsAndAlbums({
+  const _ListOfArtistsAndAlbums({
     Key? key,
-    required this.title,
+    required this.text,
     required this.artistsAndAlbums,
   }) : super(key: key);
 
@@ -98,8 +98,8 @@ class ListOfArtistsAndAlbums extends StatelessWidget {
     return SpacedColumn(
       space: 16,
       children: [
-        Text(
-          title,
+        CustomText(
+          text: text,
           style: ThemeTextSemibold.graphik20,
         ),
         SingleChildScrollView(
@@ -109,7 +109,7 @@ class ListOfArtistsAndAlbums extends StatelessWidget {
             children: [
               for (var image in artistsAndAlbums)
                 ButtonWithIcon(
-                  name: image['name'],
+                  text: image['name'],
                   image: image['image'],
                   onTap: image['onTap'],
                 ),

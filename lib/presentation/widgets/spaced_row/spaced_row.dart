@@ -1,4 +1,4 @@
-import 'package:spotify/presentation/template/base/template.dart';
+import 'package:spotify/presentation/template/template.dart';
 
 class SpacedRow extends StatelessWidget {
   final double space;
@@ -20,9 +20,7 @@ class SpacedRow extends StatelessWidget {
     for (var child in children) {
       widgets.add(child);
       if (children.last != child) {
-        widgets.add(SizedBox(
-          width: space.w,
-        ));
+        widgets.add(SizedBox(width: space.w));
       }
     }
     return Row(
