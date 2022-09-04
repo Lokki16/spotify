@@ -11,39 +11,32 @@ class Home extends StatelessWidget {
       'onTap': () {},
     });
 
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(16.h),
-            child: SpacedColumn(
-              space: 24,
-              children: [
-                _Greetings(
-                  text: ConstantText.goodEvening,
-                  icons: [
-                    {
-                      'icon': SpotifyIcons.notifications,
-                      'onTap': () {},
-                    },
-                    {
-                      'icon': SpotifyIcons.history,
-                      'onTap': () {},
-                    },
-                    {
-                      'icon': SpotifyIcons.settings,
-                      'onTap': () {},
-                    },
-                  ],
-                ),
-                _ListOfArtistsAndAlbums(
-                  text: ConstantText.recentlyPlayed,
-                  image: listOfArtistsAndAlbums,
-                )
-              ],
-            ),
+    return DefaultBody(
+      child: SpacedColumn(
+        space: 24,
+        children: [
+          _Greetings(
+            text: ConstantText.goodEvening,
+            icons: [
+              {
+                'icon': SpotifyIcons.notifications,
+                'onTap': () {},
+              },
+              {
+                'icon': SpotifyIcons.history,
+                'onTap': () {},
+              },
+              {
+                'icon': SpotifyIcons.settings,
+                'onTap': () {},
+              },
+            ],
           ),
-        ),
+          _ListOfArtistsAndAlbums(
+            text: ConstantText.recentlyPlayed,
+            image: listOfArtistsAndAlbums,
+          )
+        ],
       ),
     );
   }
@@ -66,7 +59,7 @@ class _Greetings extends StatelessWidget {
       children: [
         CustomText(
           text: text,
-          style: ThemeTextSemibold.graphik20,
+          style: ThemeTextSemibold.s20,
         ),
         SpacedRow(
           space: 20,
@@ -97,7 +90,7 @@ class _ListOfArtistsAndAlbums extends StatelessWidget {
       children: [
         CustomText(
           text: text,
-          style: ThemeTextSemibold.graphik20,
+          style: ThemeTextSemibold.s20,
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,

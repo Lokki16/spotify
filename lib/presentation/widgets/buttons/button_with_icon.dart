@@ -33,7 +33,7 @@ class ButtonWithIcon extends StatelessWidget {
         SizedBox(height: 8.h),
         CustomText(
           text: text,
-          style: ThemeTextSemibold.graphik12,
+          style: ThemeTextSemibold.s12,
           overflow: TextOverflow.ellipsis,
         ),
       ],
