@@ -1,3 +1,3 @@
 # Spotify
 
-A new Flutter project.
+Spotify project
